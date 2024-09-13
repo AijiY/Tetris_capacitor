@@ -1,0 +1,224 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+* {
+    color: black;
+    font-size: 5vw;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background: rgb(240, 240, 240);
+    border-radius: 1vw;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #title {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3vw solid grey;
+    border-radius: 2vw;
+    background-color: lightgrey;
+    padding: 4vw;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #game-display {
+    box-sizing: content-box;
+    /* width: 200px; */
+    /* height: 300px; */
+    background-color: white;
+  }
+  
+  #next-block-display {
+    box-sizing: content-box;
+    /* width: 80px; */
+    /* height: 80px; */
+    background-color: white;
+  }
+  
+  #exit-button-container, #game-information-and-next-block,
+   #rotate-move-button-container, #move-down-button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  #exit-button-container {
+    margin-bottom: 2vh;
+    gap: 2vw;
+  }
+  
+    /* ↓ for index.html(others:for game.html) */
+  #main-container, #difficulty-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2vw;
+  }
+  
+  #main-container {
+    gap: 10vw;
+    align-items: center;
+    background-color: lightgrey;
+    width: 100%;
+    height: 100%;
+  }
+
+  #difficulty-button-container {
+    gap: 4vw;
+  }
+
+  #title {
+    font-size: 20vw;
+  }
+
+  .difficulty-button {
+    flex: 1;
+    font-size: 10vw;
+    padding: 2vw;
+  }
+  
+  #easy-button {
+    color: blue;
+  }
+  
+  #normal-button {
+    color: black;
+  }
+  
+  #hard-button {
+    color: red;
+  }
+  /* ↑ for index.html(others:for game.html) */
+  
+  #game-information-and-next-block {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    align-items: center;
+  }
+  
+  #game-button-container, #game-information-container, #next-block-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #game-button-container {
+    gap: 2vw;
+    margin-top: 5vw;
+  }
+  
+  
+  .game-button {
+    vertical-align: middle;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    flex: 1;
+  }
+  
+  #start-reset-button, #exit-button {
+    padding: 1vw 2vw;
+    margin: 4vw, 1vw;
+  }
+
+  #start-reset-button, #exit-button, #time, #score {
+    font-size: 6vw;
+  }
+  
+  #next-block-display, #game-display {
+    position: relative;
+  }
+  
+  .block {
+    box-sizing: border-box;
+    border: 0.1vh solid white;
+    position: absolute;
+  }
+  
+  #game-over, #you-win {
+    position: absolute;
+    border: 1vw solid black;
+    background-color: white;
+    padding: 5vw;
+    z-index: 2;
+    visibility: hidden;
+    font-size: 10vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #game-over {
+    color: red;
+  }
+  
+  #you-win {
+    color: blue;
+  }
+  
+  #move-down-button {
+    width: 50%;
+    padding: 1.5vh;
+  }/*# sourceMappingURL=styles.css.map */
+
+  #rotate-right-button, #rotate-left-button {
+    padding-bottom: 1vh;
+    /* padding-top: 0.5vh; */
+    font-size: 7vw;
+  }
+
+  /* #move-right-button, #move-left-button {
+    padding-bottom: 0.5vh 0;
+  } */
+
+  #rotate-move-button-container {
+    gap: 2vw;
+  }
+
+  #next-block-label {
+    font-size: 6vw;
+  }
