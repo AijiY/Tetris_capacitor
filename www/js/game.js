@@ -199,8 +199,6 @@ const updateTimeText = () => {
     const seconds = Math.floor(presentTimeSeconds) % 60;
     const minutesText = minutes.toString().padStart(2, "0");
     const secondText = seconds.toString().padStart(2, "0");
-    console.log(`Updating time text to: ${minutesText}:${secondText}`);
-
     const timeElement = document.getElementById('time');
     if (timeElement) {
         timeElement.innerText = "Time: " + minutesText + ":" + secondText;
@@ -662,12 +660,12 @@ const sumOfRow = (rowNum) => {
 }
 
 const moveFallenBlocksDownInArray = (rowNum) => {
-    let k = rowNum;
-    while (sumOfRow(k-1) > arrayRoomofLeftAndRight * 2) {
+    let k = rowNum - 1;
+    while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
         for (let i = arrayRoomofLeftAndRight;
             i < arrayRoomofLeftAndRight + gameDisplayWidthLength; i++) {
-                arrayOfblocksInGameDisplay[k][i] = arrayOfblocksInGameDisplay[k - 1][i]
-                arrayOfblocksInGameDisplay[k - 1][i] = 0;
+                arrayOfblocksInGameDisplay[k + 1][i] = arrayOfblocksInGameDisplay[k][i]
+                arrayOfblocksInGameDisplay[k][i] = 0;
         }
         k --;
     }
@@ -734,6 +732,15 @@ const deleteFallenBlocks = () => {
         }
         k --;
     }
+    // // arrayOfblocksInGameDisplayを出力
+    // console.log("arrayOfblocksInGameDisplay after deleteFallenBlocks/n");
+    // for (let i = 0; i < arrayOfblocksInGameDisplay.length; i++) {
+    //     for (let j = 0; j < arrayOfblocksInGameDisplay[i].length; j++) {
+    //         console.log(arrayOfblocksInGameDisplay[i][j] + ",");            
+    //     }
+    //     console.log("\n");
+    // }
+    return;
 }
 
 const updateTimer = () => {
