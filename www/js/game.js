@@ -661,9 +661,7 @@ const sumOfRow = (rowNum) => {
 
 const moveFallenBlocksDownInArray = (rowNum) => {
     let k = rowNum - 1;
-    // while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
-    // 上まで全部検査
-    while (k >= 0) {
+    while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
         for (let i = arrayRoomofLeftAndRight;
             i < arrayRoomofLeftAndRight + gameDisplayWidthLength; i++) {
                 arrayOfblocksInGameDisplay[k + 1][i] = arrayOfblocksInGameDisplay[k][i]
@@ -727,9 +725,7 @@ const deleteRowAndMoveFallenBlocksDown = (rowNum) => {
 
 const deleteFallenBlocks = () => {
     let k = gameDisplayHeightLength - 1;
-    // while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
-        // 上まで全部検査
-    while (k >= 0) {
+    while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
         if (sumOfRow(k) === gameDisplayWidthLength + arrayRoomofLeftAndRight * 2) {
             deleteRowAndMoveFallenBlocksDown(k);
             k ++;
@@ -748,6 +744,9 @@ const deleteFallenBlocks = () => {
 }
 
 const updateTimer = () => {
+    // ボタン操作を無効化
+    gameButtons.forEach(button => button.disabled = true);
+    // timer処理
     const blockMovedDown = moveDownFallingBlock();
     if (!blockMovedDown) {
         convertFallingBlockTofallenBlock();
@@ -759,6 +758,8 @@ const updateTimer = () => {
     }
     presentTimeSeconds += presentInterval;
     updateTimeText();
+    // ボタン操作を有効化
+    gameButtons.forEach(button => button.disabled = false);
     return;
 }
 
