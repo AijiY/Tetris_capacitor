@@ -89,9 +89,11 @@
 - ↶、↷ボタン：テトリミノを左右に回転します。
   https://youtu.be/cmqLvL39Qeg
 - ←、→ボタン：テトリミノを左右に移動します。
-  https://youtu.be/ElVsene5eqs
+  https://youtube.com/shorts/TqiJyxDFm0w
 - ↓ボタン：テトリミノを下まで落下させます。
+  https://youtube.com/shorts/GBQEZ1NOUG0
 
 ### ゲーム終了条件
 - ゲームオーバー条件：次のテトリミノを配置できなくなったらゲームオーバーです。
+  https://youtube.com/shorts/hpVc9yGkBUM
 - クリア条件：Score（ブロック行を消去した数）が1000に到達するとゲームクリアです。
