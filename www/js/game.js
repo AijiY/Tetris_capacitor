@@ -661,7 +661,8 @@ const sumOfRow = (rowNum) => {
 
 const moveFallenBlocksDownInArray = (rowNum) => {
     let k = rowNum - 1;
-    while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
+    // while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
+    while (k >= 0) {
         for (let i = arrayRoomofLeftAndRight;
             i < arrayRoomofLeftAndRight + gameDisplayWidthLength; i++) {
                 arrayOfblocksInGameDisplay[k + 1][i] = arrayOfblocksInGameDisplay[k][i]
@@ -725,7 +726,8 @@ const deleteRowAndMoveFallenBlocksDown = (rowNum) => {
 
 const deleteFallenBlocks = () => {
     let k = gameDisplayHeightLength - 1;
-    while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
+    // while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
+    while (k >= 0) {
         if (sumOfRow(k) === gameDisplayWidthLength + arrayRoomofLeftAndRight * 2) {
             deleteRowAndMoveFallenBlocksDown(k);
             k ++;
