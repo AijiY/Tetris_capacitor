@@ -87,7 +87,7 @@
 ### ボタン操作
 - Resetボタン：ゲームを初期化します。
 - ↶、↷ボタン：テトリミノを左右に回転します。
-  https://youtu.be/cmqLvL39Qeg
+  https://youtube.com/shorts/3IT2Rgs7QYU
 - ←、→ボタン：テトリミノを左右に移動します。
   https://youtube.com/shorts/TqiJyxDFm0w
 - ↓ボタン：テトリミノを下まで落下させます。
