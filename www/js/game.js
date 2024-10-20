@@ -661,8 +661,7 @@ const sumOfRow = (rowNum) => {
 
 const moveFallenBlocksDownInArray = (rowNum) => {
     let k = rowNum - 1;
-    // while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
-    while (k >= 0) {
+    while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
         for (let i = arrayRoomofLeftAndRight;
             i < arrayRoomofLeftAndRight + gameDisplayWidthLength; i++) {
                 arrayOfblocksInGameDisplay[k + 1][i] = arrayOfblocksInGameDisplay[k][i]
@@ -726,8 +725,7 @@ const deleteRowAndMoveFallenBlocksDown = (rowNum) => {
 
 const deleteFallenBlocks = () => {
     let k = gameDisplayHeightLength - 1;
-    // while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
-    while (k >= 0) {
+    while (sumOfRow(k) > arrayRoomofLeftAndRight * 2) {
         if (sumOfRow(k) === gameDisplayWidthLength + arrayRoomofLeftAndRight * 2) {
             deleteRowAndMoveFallenBlocksDown(k);
             k ++;
@@ -745,23 +743,23 @@ const deleteFallenBlocks = () => {
     return;
 }
 
-const updateTimer = () => {
-    // ボタン操作を無効化
-    gameButtons.forEach(button => button.disabled = true);
-    // timer処理
-    const blockMovedDown = moveDownFallingBlock();
-    if (!blockMovedDown) {
-        convertFallingBlockTofallenBlock();
-        deleteFallenBlocks();
-        const canPutFallingBlock = !convertNextBlockToFallingBlock();
-        if (canPutFallingBlock) {
-            generateNextBlock();
+const updateTimer = async () => {
+    try {
+        // timer処理
+        const blockMovedDown = await moveDownFallingBlock();
+        if (!blockMovedDown) {
+            await convertFallingBlockTofallenBlock();
+            await deleteFallenBlocks();
+            const canPutFallingBlock = await !convertNextBlockToFallingBlock();
+            if (canPutFallingBlock) {
+                generateNextBlock();
+            }
         }
+        presentTimeSeconds += presentInterval;
+        updateTimeText();
+    } catch (error) {
+        console.error("Error occurred during updateTimer processing:", error);
     }
-    presentTimeSeconds += presentInterval;
-    updateTimeText();
-    // ボタン操作を有効化
-    gameButtons.forEach(button => button.disabled = false);
     return;
 }
 
