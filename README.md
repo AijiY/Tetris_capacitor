@@ -86,7 +86,7 @@
 
 ### ボタン操作
 - Resetボタン：ゲームを初期化します。
-- 
+
 - ↶、↷ボタン：テトリミノを左右に回転します。
   <br>
   ![rotate ‐ Clipchampで作成](https://github.com/user-attachments/assets/87af9738-0edd-45a1-a11e-d66c0d14ee43)
