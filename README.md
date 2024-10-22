@@ -86,17 +86,23 @@
 
 ### ボタン操作
 - Resetボタン：ゲームを初期化します。
+- 
 - ↶、↷ボタン：テトリミノを左右に回転します。
+  <br>
   ![rotate ‐ Clipchampで作成](https://github.com/user-attachments/assets/87af9738-0edd-45a1-a11e-d66c0d14ee43)
+
 - ←、→ボタン：テトリミノを左右に移動します。
+  <br>
   ![move ‐ Clipchampで作成](https://github.com/user-attachments/assets/f09e3e99-1ae2-4674-a7a5-426bc9e516b0)
 
 - ↓ボタン：テトリミノを下まで落下させます。
+  <br>
   ![movedown ‐ Clipchampで作成](https://github.com/user-attachments/assets/8b5e7f2a-dc5b-4eeb-b8a9-d5ee22976b60)
 
 
 ### ゲーム終了条件
 - ゲームオーバー条件：次のテトリミノを配置できなくなったらゲームオーバーです。
+  <br>
   ![gameover ‐ Clipchampで作成](https://github.com/user-attachments/assets/9214baf8-8f66-4220-8e3f-8cb70433d020)
 
 - クリア条件：Score（ブロック行を消去した数）が1000に到達するとゲームクリアです。
