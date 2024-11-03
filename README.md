@@ -5,6 +5,8 @@
 
 ## 開発環境（Development Environment）
 ### 技術（Technologies）
+![badge](https://img.shields.io/badge/Node.js-20.16.0-8CC84B.svg?logo=nodedotjs&logoColor=white)
+![badge](https://img.shields.io/badge/npm-10.8.2-CB3837.svg?logo=npm&logoColor=white)
 ![badge](https://img.shields.io/badge/-HTML5-333.svg?logo=html5&style=flat)
 ![badge](https://img.shields.io/badge/-CSS3-1572B6.svg?logo=css3&style=flat)
 ![badge](https://img.shields.io/badge/Javascript-276DC3.svg?logo=javascript&style=flat)
