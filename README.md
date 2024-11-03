@@ -14,6 +14,7 @@
 ### ツール（Tools）
 ![badge](https://img.shields.io/badge/Visual%20Studio%20Code-1.95.0-007ACC.svg?logo=visual-studio-code&style=flat)
 ![badge](https://img.shields.io/badge/Capacitor-6.1.2-119EFF.svg?logo=capacitor&style=flat)
+![badge](https://img.shields.io/badge/GitHub-%23181717?logo=github&logoColor=white)
 ![badge](https://img.shields.io/badge/Microsoft%20Clipchamp-007ACC.svg?logo=visual-studio-code&style=flat)
 
 ## 機能（Function）
